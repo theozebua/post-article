@@ -26,4 +26,4 @@ Open `.env` file and change the database name to `post_article` or whatever data
 
 ## Demo
 
-[Click here](https://posts-articles.theozebua.com)
+[Click here](http://posts-articles.theozebua.com/)

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('category_id')->constrained('categories');
             $table->string('title');
             $table->text('content');
-            $table->string('status')->default('Draft');
+            $table->string('status')->default('Publish');
             $table->timestamps();
             $table->softDeletes();
         });

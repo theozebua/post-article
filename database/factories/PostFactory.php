@@ -18,8 +18,8 @@ class PostFactory extends Factory
     {
         return [
             'category_id' => $this->faker->numberBetween(1, 10),
-            'title' => $this->faker->sentence(20),
-            'content' => $this->faker->paragraph(50, true),
+            'title' => $this->faker->words(20, true),
+            'content' => $this->faker->paragraphs(50, true),
         ];
     }
 }

@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Dashboard\{DashboardController, CategoryController, PostController};
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,4 +23,14 @@ Route::middleware('guest')->as('auth.')->group(function () {
 Route::middleware('auth')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
     Route::get('/dashboard', DashboardController::class)->name('dashboard.index');
+
+    Route::as('posts.')->group(function () {
+        Route::put('restore/{id}', [PostController::class, 'restore'])->name('restore');
+        Route::delete('delete/{id}', [PostController::class, 'delete'])->name('delete');
+    });
+
+    Route::resources([
+        'categories' => CategoryController::class,
+        'posts' => PostController::class
+    ]);
 });

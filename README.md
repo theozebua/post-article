@@ -16,6 +16,8 @@ Copy `.env.example` to `.env`
 
 Open `.env` file and change the database name to `post_article` or whatever database name.
 
+Make sure you have created the database.
+
 ## Run Locally
 
 ```bash

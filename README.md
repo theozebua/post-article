@@ -23,3 +23,7 @@ Open `.env` file and change the database name to `post_article` or whatever data
   php artisan migrate:fresh --seed
   php artisan serve
 ```
+
+## Demo
+
+[Click here](https://posts-articles.theozebua.com)
